@@ -1,0 +1,61 @@
+.download {
+    grid-column: full-start/ full-end;
+     background-color:white;
+
+     display:grid;
+     grid-template-columns: [ full-start] minmax(6rem, 1fr )  
+     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
+    background-image: url(../img/Download_img_big.jpg);
+    background-size: cover;
+    height: 50rem;
+
+    &__box {
+        grid-column: center-start/ center-end;
+        // grid-column: 2/ span 1;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: min-content min-content 1fr;
+        // background-color: orchid;
+        
+        justify-content: center;
+    }
+
+    &__text{
+
+        h3{
+            // text-align: center;
+            font-size: 3.2rem;
+            font-weight: 400;
+            margin-top: 7rem;
+        }
+        p{
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &__button{
+
+        &,
+        &:link, 
+        &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.0rem 2rem;
+        box-shadow: 0 1rem 2rem rgba(21,21,21,.2);
+        // position: relative;
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+
+        border-radius: 2rem;
+        display: inline-block;
+        background-color: $color-primary;
+        color: $color-secondary_dark;
+        font-weight: 700;
+        }
+        
+    }
+}

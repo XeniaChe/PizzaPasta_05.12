@@ -1,0 +1,109 @@
+.food{
+    grid-column: full-start/ full-end;
+    background-color: $color-secondary;
+
+    display: grid;
+    grid-template-columns: [ full-start] minmax(6rem, 1fr )  
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
+    
+  
+    &__box {
+        grid-column: center-start/ center-end;
+
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content);
+        grid-template-rows: repeat(3,minmax(min-content, max-content) ) ;
+        justify-content: center;
+
+     
+      
+    }
+
+   
+
+    &__heading {
+        grid-column:1/ span 4  ;
+        margin: 4rem 0 4rem 0 ;
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+
+    &__choosen{
+        background-color: $color-primary;
+        grid-column: 1/ span 4;
+
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-columns: min-content  minmax(min-content, 1fr);
+
+        margin-bottom: 3rem;
+
+        &-text{
+            margin: 2rem;
+            margin-left: 5rem;
+            h3{
+                color: red;
+                font-size: 3.2rem;
+                font-weight: 400;
+            }
+
+            p{
+                font-size: 1.4rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        &-list{
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            margin-left: 2rem;
+        }
+    }
+
+    &__general{
+        grid-column: 1/span 4;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+        grid-column-gap: 2rem;
+
+        
+    
+    }
+    
+
+
+}
+.recipe {
+    display: grid;
+    justify-content:center;
+    
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    justify-items: center;
+    padding: 2rem  4rem 2rem  4rem;
+
+    background-color: white;
+
+    &:hover{
+        background-color: $color-primary;
+        margin-bottom: 0;
+    }
+
+    &__title{
+        font-size: 3.2rem;
+        font-weight: 300;
+    }
+    &:hover &__title{
+        
+        margin-bottom: 2rem;
+    }
+    &__img{
+        border-radius: 50%;
+        height: 10rem;
+        display: block;
+
+    }
+
+}
+
