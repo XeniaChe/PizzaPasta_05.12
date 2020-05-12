@@ -39,6 +39,7 @@
 
         margin-bottom: 3rem;
 
+        
         &-text{
             margin: 2rem;
             margin-left: 5rem;
@@ -46,11 +47,19 @@
                 color: red;
                 font-size: 3.2rem;
                 font-weight: 400;
+
+                @include respond(tabl-port){
+                    font-size: 3.5rem;
+                }
             }
 
             p{
                 font-size: 1.4rem;
                 margin-bottom: 3rem;
+
+                @include respond(tabl-port){
+                    font-size: 2.0rem;
+                }
             }
         }
 
@@ -58,6 +67,10 @@
             font-size: 1.4rem;
             margin-bottom: 3rem;
             margin-left: 2rem;
+
+            @include respond(tabl-port){
+                font-size: 2.2rem;
+            }
         }
     }
 

@@ -38,22 +38,19 @@ body {
     font-weight: 300;
     color:$color-secondary_dark;
     line-height: 1.6;
-    // background-color:orange;
+
 }
 
 .container {
     display: grid;
 
-    grid-template-rows: 85vh  repeat(4, minmax(min-content, max-content));
+    grid-template-rows: min-content 75vh  repeat(4, minmax(min-content, max-content));
     grid-template-columns:  [ full-start] minmax(6rem, 1fr )  
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
 
- 
-
-     @include respond(tabl-port){
-        grid-template-rows: 70vh ;
-
-          }
+    @include respond(tabl-port){
+        grid-template-rows: min-content 70vh  ;
+    }
 
 }
      

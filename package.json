@@ -9,7 +9,7 @@
     "start": "npm-run-all --parallel watch:sass devserver",
     "compile:sass": "node-sass src/sass/style.scss src/css/style.comp.css",
     "concat": " concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css ",
-    "prefix:css": " postcss --use autoprefixer -b \"last 10 versions\" src/css/style.concat.css -o src/css/style.prefix.css",
+    "prefix:css": " postcss --use autoprefixer -b \"last 10 versions\" src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": " node-sass src/css/style.prefix.css src/css/style.min.css --output-style compressed",
     "build": "npm-run-all compile:sass concat prefix:css compress:css"
   },
@@ -23,6 +23,7 @@
     "postcss-cli": "^7.1.0"
   },
   "dependencies": {
+    "flickity": "^2.2.1",
     "owl.carousel": "^2.3.4"
   }
 }

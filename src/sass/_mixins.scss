@@ -28,6 +28,10 @@ Page Layouts +Components */
         @media (max-width: 31.25em) { @content }   
     };
 
+    @if $breakpoint == phone-550 {             //550px  550/16=34.38
+        @media (max-width: 34.38em) { @content }   
+    };
+
     @if $breakpoint == phone  {             //600px  600/16=37.5
         @media (max-width: 37.5em) { @content }   
     };

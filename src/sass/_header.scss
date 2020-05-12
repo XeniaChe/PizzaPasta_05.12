@@ -8,7 +8,7 @@
       grid-template-rows: min-content 1fr;
       // position: relative;
  
-  &__still{
+  .header__still{
       grid-column: center-start/ center-end;
       grid-row: 1/span 1;
 
@@ -25,7 +25,7 @@
       }
 
   }
-  &__logo{
+  .header__logo{
     grid-column: 1/ span 1;
       margin: 2rem;
       display: grid;
@@ -53,7 +53,7 @@
     
   }
 
-  &__nav{
+  .header__nav{
     justify-self: end;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@
   
 
 
-  &__slider{
+  .header__slider{
     grid-column: center-start/ center-end;
     grid-row: 2/span 1;
 
@@ -189,55 +189,97 @@
     }
    }
 
-  &__img{
+  .header__img{
     position: absolute;
     grid-row: 1/span 2;
     grid-column: full-start/ full-end;
-    // width: 100%;
+    width: 100%;
     height: 100%;
     z-index: -100;
     filter: brightness(.7);
+    // display: block;
   }
 }
 
 
-.owl-carousel{ 
-  grid-column: full-start/ full-end;
-  background-color: $color-secondary;
+// .owl-carousel{ 
+//   grid-column: full-start/ full-end;
+//   background-color: $color-secondary;
    
 
-  .item{
-      display:grid;
-      grid-template-columns: [ full-start] minmax(6rem, 1fr )  
-      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
-       grid-template-rows: min-content 1fr;
+//   .item{
+//       display:grid;
+//       grid-template-columns: [ full-start] minmax(6rem, 1fr )  
+//       [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
+//        grid-template-rows: min-content 1fr;
 
-  }
-
-
-  .owl-stage{
-    margin-bottom: 0rem;
-    height: 100%;
-  }	
+//   }
 
 
-  .owl-stage-outer {
-    height:100%;
-  }
+//   .owl-stage{
+//     margin-bottom: 0rem;
+//     height: 100%;
+//   }	
 
-  .owl-item,
-  .owl-item-active{
-    height: 100%;
-  }
+
+//   .owl-stage-outer {
+//     height:100%;
+//   }
+
+//   .owl-item,
+//   .owl-item-active{
+//     height: 100%;
+//     opacity: 0;
+//     transition: opacity .75s linear;
+//   }
   
   
-  .owl-dots {
-    background-color: $color-secondary;
-  }
+//   .owl-dots {
+//     background-color: $color-secondary;
+//   }
   
+  
+//   .owl-carousel .owl-stage-outer {
+//     /* override */
+//     overflow: initial;
+//   }
+
+// }
+
+
+.main-carousel{
+  grid-column: full-start/ full-end;
+  //   background-color: $color-secondary;
   
 }
 
+.carousel-cell{
+//   // width: 15rem;
+//   // height: 200px;
+//   // margin-right: 10px;
+//   // background: #8C8;
+//   // border-radius: 5px;
+//   counter-increment: carousel-cell;
+//   // width: 100%;
+//   grid-column: full-start/ full-end;
+//   display:grid;
+//   grid-template-columns: [ full-start] minmax(6rem, 1fr )  
+//   [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
+//   grid-template-rows: min-content 1fr;
+// background-color: orangered;
+  display:grid;
+  grid-template-columns: [ full-start] minmax(6rem, 1fr )  
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr ) [full-end];
+  grid-template-rows: min-content 1fr;
+}
 
 
-
+// /* cell number */
+// .carousel-cell:before {
+//   display: block;
+//   text-align: center;
+//   content: counter(carousel-cell);
+//   // line-height: 200px;
+//   // font-size: 80px;
+//   // color: white;
+// }
