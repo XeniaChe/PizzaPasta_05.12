@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" /> -->
+
+    <!-- <link rel="stylesheet" href="./src/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css" rel="stylesheet" />  -->
+
+    <link rel="stylesheet" type="text/css" href="./src/css/flickity.css">
+
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="shortcut icon" type="./src/img/png" href="img/favicon.png">
 
-    <title>Nexter &mdash;your home, your freedom</title>
+    <title>Pizza and Pasta</title>
 
 </head>
 <body>
    
-     <div class="container">
-        <div class="owl-carousel owl-theme owl-reponsive-breakpoint">
+      <div class="container">
+        <!-- <div class="owl-carousel owl-theme owl-reponsive-breakpoint">
             <div class="item">
                 <img src="./src/img/header.jpg" alt="header" class="header__img">
                 <div class="header__still">
@@ -119,11 +121,63 @@
                         <img src="./src/img/heading_arrow_right.png" alt="" class="slider-arrow slider-arrow--right">
                     </div>
             </div>
+        </div>   -->
         
-            </div> 
-     
-    <!-- <div class="container">
-         <header class="header">
+        <div class="header__still">
+            <div class="header__logo">
+                <img src="./src/img/logo.png" alt="recipe 4" class="logo">
+                <p>Pizza Pasta</p>
+            </div>
+            <div class="header__nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#">food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-carousel">
+            <div class="carousel-cell"> 
+                <figure  class="header__img">
+                    <img src="./src/img/header_3.jpg" alt="Photo ">
+                </figure>
+                <div class="header__text">
+                    <h3>Gravida arcu ac tortor dignissim convallis.</h3>
+                    <p>Viverra justo nec ultrices dui sapien eget. Sed viverra ipsum nunc aliquet. 
+                        Ultrices dui sapien eget mi proin. Vel orci porta non pulvinar neque laoreet suspendisse interdum. </p>
+                    <a href="#" class="slider__button"> read more here </a>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <figure  class="header__img">
+                    <img src="./src/img/header_2.jpg" alt="Photo 2">
+                </figure>
+                <div class="header__text">
+                    <h3>Metus dictum at tempor commodo.</h3>
+                    <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis pellentum leo. </p>
+                    <a href="#" class="slider__button"> read more here </a>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <figure  class="header__img">
+                    <img src="./src/img/header.jpg" alt="Photo 3">
+                </figure>
+                <div class="header__text">
+                    <h3>Cursus penati 
+                                saccum nulla.</h3>
+                    <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis pellentum leo. </p>
+                    <a href="#" class="slider__button"> read more here </a>
+                </div>
+            </div>
+        </div>
+    <!-- <div class="container"> -->
+         <!-- <header class="header">
             <img src="./src/img/header.jpg" alt="recipe 2" class="header__img">
             <div class="header__still">
                 <div class="header__logo">
@@ -225,8 +279,6 @@
                           Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     <a href="#" class="download__button"> read more here </a>
                 </div>
-
-
                 <!-- <img src="./src/img/Download_img.jpg" alt="recipe 1" class="download__img"> -->
             </div>
         </section>
@@ -253,26 +305,25 @@
         
     </div>
 </div>
-    <script src="/src/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-    <script src="/src/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-    <!-- <script>
-        $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:0
-        },
-        600:{
-            items:1
-        },
-        1900:{
-            items:1
-        }
-    }
-        })
-    </script> -->
+    <!-- <script src="/src/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="/src/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script> -->
+
+    <script src="/src/js/flickity.pkgd.js"></script>
+        <script>
+            var elem = document.querySelector('.main-carousel');
+            var flkty = new Flickity( elem, {
+            // options
+            cellAlign: 'left',
+            contain: true,
+            imagesLoaded: true,
+            setGallerySize: false,
+            cellSelector: '.carousel-cell'
+            });
+
+    </script>
+
+
+<!-- 
     <script>
         $('.owl-carousel').owlCarousel({
     loop:true,
@@ -295,6 +346,10 @@
     }
 })
     </script>
-    
+     -->
+
+
+	
+  </script>
 </body>
 </html>
