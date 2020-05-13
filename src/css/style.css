@@ -180,7 +180,7 @@ body {
       .header__nav .nav-item {
         margin: .5rem; } }
 
-.slider__button, .slider__button:link, .slider__button:visited {
+.header__button, .header__button:link, .header__button:visited {
   align-self: start;
   justify-self: start;
   text-decoration: none;
